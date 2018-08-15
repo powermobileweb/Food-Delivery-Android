@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_restaurant_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="5dp"
+    android:paddingLeft="5dp"
+    android:paddingRight="5dp"
+    android:paddingTop="5dp"
+    android:orientation="vertical"
+    tools:context="com.example.soxluvr23.afinal.RestaurantView">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        tools:context="com.transitiontose.schmidttandroidlist.DetailsActivity"
+        android:background="?android:attr/listChoiceBackgroundIndicator">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/image"
+                android:layout_margin="4dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:cropToPadding="false" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:text="TextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:id="@+id/Restaurant"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:text="TextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/address"
+                    android:layout_weight="1" />
+
+                <TextView
+                android:text="TextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/hours"
+                android:layout_weight="1" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/activity_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="5dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:paddingTop="5dp"
+        tools:context="com.example.soxluvr23.pos.MainActivity"
+        android:orientation="vertical"
+        android:screenOrientation="portrait">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="1"
+            android:orientation="horizontal">
+
+
+            <Button
+                android:text="Add To Order"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/ButtonNewItem"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/ButtonNewOrder"
+                android:layout_toEndOf="@+id/ButtonNewOrder" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:text="Item:"
+                android:layout_width="wrap_content"
+                android:id="@+id/Item"
+                android:textSize="20sp"
+                android:paddingTop="@dimen/activity_vertical_margin"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_height="40dp" />
+
+            <AutoCompleteTextView
+                android:layout_width="match_parent"
+                android:id="@+id/ItemInput"
+                android:textSize="20sp"
+                android:paddingTop="@dimen/activity_vertical_margin"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:imeOptions="actionNext"
+                android:inputType="textCapWords"
+                android:textAlignment="viewEnd"
+                tools:ignore="RtlCompat"
+                android:completionThreshold="1"
+                android:layout_height="60dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="67dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:text="Quantity:"
+                android:layout_width="wrap_content"
+                android:id="@+id/Quantity"
+                android:textSize="20sp"
+                android:layout_below="@+id/ItemInput"
+                android:paddingTop="@dimen/activity_vertical_margin"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_height="40dp" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/QuantityInput"
+                android:singleLine="true"
+                android:layout_alignTop="@+id/Quantity"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:paddingTop="@dimen/activity_vertical_margin"
+                android:text="1"
+                android:textAlignment="textEnd"
+                tools:ignore="RtlCompat"
+                android:layout_height="60dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="66dp"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <TextView
+                android:text="Unit Cost:"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:id="@+id/UnitCost"
+                android:layout_alignTop="@+id/UnitCostInput"
+                android:paddingTop="@dimen/activity_vertical_margin"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:textSize="20sp"
+                android:layout_weight="1" />
+
+            <TextView
+                android:layout_width="250dp"
+                android:layout_height="60dp"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/UnitCostInput"
+                android:singleLine="true"
+                android:paddingTop="@dimen/activity_vertical_margin"
+                android:layout_below="@+id/QuantityInput"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:textAlignment="textEnd"
+                android:text="0.00"
+                tools:ignore="RtlCompat" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="50dp">
+
+            <Button
+                android:text="CHECK OUT"
+                android:layout_width="176dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/Total"
+                android:layout_below="@+id/UnitCostInput"
+                android:layout_alignRight="@+id/UnitCost"
+                android:layout_alignEnd="@+id/UnitCost"
+                android:layout_weight="0.94" />
+
+            <TextView
+                android:text="0.00"
+                android:layout_width="176dp"
+                android:layout_height="40dp"
+                android:id="@+id/TotalDisplay"
+                android:textSize="35sp"
+                android:layout_alignBottom="@+id/Total"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:textAlignment="textEnd"
+                tools:ignore="RtlCompat" />
+
+        </LinearLayout>
+
+        <TextView
+            android:text=""
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/OrderDisplay"
+            android:textSize="24sp"
+            android:layout_alignBottom="@+id/Total"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:textAlignment="textStart"
+            tools:ignore="RtlCompat" />
+
+
+    </LinearLayout>
+
+</LinearLayout>
